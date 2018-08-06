@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Food.delete_all
+
+Food.create!(
+ name:"Tenderloin Steak",
+ description:
+  %{
+   Tenderloin hanya terdapat di bagian tengah sapi.
+   },
+    image_url:"Tenderloin.png",
+    price:95000.00
+)
