@@ -57,7 +57,7 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'faker'
+  gem 'faker', "~> 1.9.1"
   gem 'capybara', "~> 2.4.3"
   gem 'database_cleaner', "~> 1.3.0"
   gem 'launchy', "~> 2.4.2"

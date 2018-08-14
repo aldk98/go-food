@@ -4,4 +4,11 @@ FactoryGirl.define do
 		description "Betawi style steamed"
 		price 10000.0
 	end
+
+	factory :invalid_food, parent: :food do
+		name nil
+		description nil
+		price 10000.0
+	end
+
 end
