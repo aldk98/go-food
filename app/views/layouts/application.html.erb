@@ -9,7 +9,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller.controller_name %>">
+    <div id="banner">
+      <%= image_tag 'go-food.jpg', alt: "Simplified Go Food"%>
+      <span class="title"><%= @page_title %></span>
+    </div>
+    <div id="columns">
+      <div id="side">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Orders</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

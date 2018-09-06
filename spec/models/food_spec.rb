@@ -139,4 +139,13 @@ describe Food do
     expect(food.errors[:image_url]).to include("must be a URL for GIF, JPG or PNG image.")
   end
 
+  it "can't be destroyed while it has line_item(s)" do
+    cart = create(:cart)
+    food = create(:food)
+
+    line_item = create(:line_item, cart: cart, food: food)
+    food.line_items << line_item
+
+    expect {food.destroy}.not_to change(Food, :count)
+  end
 end

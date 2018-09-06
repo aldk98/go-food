@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<h1>Your Food Catalog</h1>
+
+
+    <% @foods.each do |food| %>
+    <div class="entry">
+        <div class="price_line">
+            <span class="price"><%= number_to_currency(food.price,unit: "Rp ",delimiter: ".",separator: ",") %></span>
+        </div>
+    </div>
+  <% end %>
+<% @foods.each do |food| %>
+    <div class="entry">
+        <div class="price_line">
+            <span class="price"><%= number_to_currency(food.price, unit: "Rp ", delimiter: ".", separator: ",") %></span>
+          </div>
+    </div>
+<% end %>
+
